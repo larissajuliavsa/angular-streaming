@@ -8,6 +8,6 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+    loadChildren: () => import('./pages/login/login/login.module').then(m => m.LoginModule)
   }
 ]
