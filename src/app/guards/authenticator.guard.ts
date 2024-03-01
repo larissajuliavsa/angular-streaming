@@ -2,7 +2,7 @@ import { inject } from "@angular/core";
 import { Router } from "@angular/router";
 import { StreamingService } from "../services/streaming.service";
 
-export const checkUserLoginGuard = () => new Promise(async (res, rej) => {
+export const userLoginAuth = () => new Promise(async (res, rej) => {
   const streamingService = inject(StreamingService);
   const router = inject(Router);
 
@@ -19,7 +19,7 @@ export const checkUserLoginGuard = () => new Promise(async (res, rej) => {
   }
 
   const userLoggedIn = await streamingService.initializeUser();
-  
+
   if (userLoggedIn) {
     res(true)
   } else {
