@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StreamingService } from 'src/app/services/streaming.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { StreamingService } from 'src/app/services/streaming.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private streamingService: StreamingService) {}
+  constructor(private streamingService: StreamingService, private router: Router) {}
 
   ngOnInit(): void {
     this.setToken()
@@ -21,7 +22,8 @@ export class LoginComponent implements OnInit {
   setToken() {
     const token = this.streamingService.getTokenCallback()
     if (token) {
-      this.streamingService.acessToken(token)
+      this.streamingService.setToken(token)
+      this.router.navigate(['/player'])
     }
   }
 }
