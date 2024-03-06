@@ -4,12 +4,19 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  background-color: $background-color;
+  background-color: $background-color-bold;
+}
+
+button, a, ul, ol {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
 }
 
 .flex {
