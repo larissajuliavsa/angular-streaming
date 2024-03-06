@@ -1,0 +1,32 @@
+<section class="menu flex">
+  <div class="logo-container flex flex-center">
+    <img src="assets/images/spotify-logo-color.svg" alt="Spotify Logo">
+  </div>
+  <div class="menu-container buttons flex">
+    <app-menu-button class="button"
+      [name]="'Home'"
+      [selected]="menuSelected === 'Home'"
+      (click)="handleClick('Home')"
+    >
+      <fa-icon [icon]="iconHome"></fa-icon>
+    </app-menu-button>
+    <app-menu-button class="button"
+      [name]="'Search'"
+      [selected]="menuSelected === 'Search'"
+      (click)="handleClick('Search')"
+    >
+      <fa-icon [icon]="iconSearch"></fa-icon>
+    </app-menu-button>
+    <app-menu-button class="button"
+      [name]="'Artist'"
+      [selected]="menuSelected === 'Artist'"
+      (click)="handleClick('Artist')"
+    >
+      <fa-icon [icon]="iconArtist"></fa-icon>
+    </app-menu-button>
+  </div>
+</section>
+
+<section class="user-data">
+
+</section>
